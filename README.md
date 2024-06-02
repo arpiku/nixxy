@@ -1,6 +1,3 @@
-nixxy is born.
+# Nixxy
 
-
-Apr 2: 01:04 
-
-
+- This is just some haskell practice along with being a cmd line tool to help me get stuff done faster
