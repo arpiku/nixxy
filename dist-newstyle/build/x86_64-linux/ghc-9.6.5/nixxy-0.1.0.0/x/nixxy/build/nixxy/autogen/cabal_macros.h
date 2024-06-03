@@ -30,6 +30,16 @@
   (major1) == 0 && (major2) <  1 || \
   (major1) == 0 && (major2) == 1 && (minor) <= 0)
 #endif /* MIN_VERSION_nixxy */
+/* package turtle-1.6.2 */
+#ifndef VERSION_turtle
+#define VERSION_turtle "1.6.2"
+#endif /* VERSION_turtle */
+#ifndef MIN_VERSION_turtle
+#define MIN_VERSION_turtle(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  6 || \
+  (major1) == 1 && (major2) == 6 && (minor) <= 2)
+#endif /* MIN_VERSION_turtle */
 
 /* tool gcc-13.2.0 */
 #ifndef TOOL_VERSION_gcc
