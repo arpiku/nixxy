@@ -1,0 +1,3 @@
+[submodule "src/Parts/st"]
+	path = src/Parts/st
+	url = https://github.com/arpiku/st.git

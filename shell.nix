@@ -1,16 +1,28 @@
-{ pkgs ? import <nixpkgs> {}} :
-  pkgs.mkShell {
-    buildInputs = with pkgs;[
-      ghc
-      cabal-install
+{ pkgs ? import <nixpkgs> {} }:
 
-      #TODO: seperate differenct functionalities in different shells
-      helix
+# TODO: Create a flake to lock down code version
 
-      #TODO: seperate nixxy dependencies properly and remove them if possible
-      haskellPackages.turtle
-      zlib
-     
+pkgs.mkShell {
+  buildInputs = [
+    #For Haskell
+    pkgs.ghc
 
-    ];
+    # This is for building st (suckless terminal)
+    pkgs.xorg.libX11
+    pkgs.xorg.libXft
+    pkgs.pkg-config
+
+    #This is to build tmux
+    pkgs.automake
+    pkgs.autoconf
+    pkgs.libevent
+    pkgs.pkg-config
+    pkgs.byacc
+    pkgs.ncurses
+  ];
+
+  shellHook = ''
+    echo "Welcome to the Nixxy development environment!"
+  '';
 }
+
