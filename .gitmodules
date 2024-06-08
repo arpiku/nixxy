@@ -1,3 +1,6 @@
 [submodule "src/Parts/st"]
 	path = src/Parts/st
 	url = https://github.com/arpiku/st.git
+[submodule "src/Parts/tmux"]
+	path = src/Parts/tmux
+	url = https://github.com/arpiku/tmux.git
