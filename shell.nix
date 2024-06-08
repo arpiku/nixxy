@@ -2,8 +2,11 @@
 
 # TODO: Create a flake to lock down code version
 
+
 pkgs.mkShell {
   buildInputs = [
+    #pkgs.vim # TODO: For developing a very minimal workstation setup in future by just using nixxy
+  
     #For Haskell
     pkgs.ghc
 
