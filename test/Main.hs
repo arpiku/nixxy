@@ -1,4 +1,21 @@
-module Main (main) where
+{-# LANGUAGE OverloadedLabels  #-}
+{-# LANGUAGE OverloadedStrings #-}
+
+
+module Main where
+
+
+import           Data.GI.Base
+import qualified GI.Gtk                        as Gtk
+
 
 main :: IO ()
-main = putStrLn "Test suite not yet implemented."
+main = do
+  Gtk.init Nothing
+
+  win <- new Gtk.Window [#title := "Introduction"]
+  on win #destroy Gtk.mainQuit
+  #showAll win
+
+  Gtk.main
+
