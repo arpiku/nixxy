@@ -20,6 +20,26 @@
   (major1) == 4 && (major2) <  18 || \
   (major1) == 4 && (major2) == 18 && (minor) <= 2)
 #endif /* MIN_VERSION_base */
+/* package brick-2.3.1 */
+#ifndef VERSION_brick
+#define VERSION_brick "2.3.1"
+#endif /* VERSION_brick */
+#ifndef MIN_VERSION_brick
+#define MIN_VERSION_brick(major1,major2,minor) (\
+  (major1) <  2 || \
+  (major1) == 2 && (major2) <  3 || \
+  (major1) == 2 && (major2) == 3 && (minor) <= 1)
+#endif /* MIN_VERSION_brick */
+/* package dbus-1.3.5 */
+#ifndef VERSION_dbus
+#define VERSION_dbus "1.3.5"
+#endif /* VERSION_dbus */
+#ifndef MIN_VERSION_dbus
+#define MIN_VERSION_dbus(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  3 || \
+  (major1) == 1 && (major2) == 3 && (minor) <= 5)
+#endif /* MIN_VERSION_dbus */
 /* package nixxy-0.1.0.0 */
 #ifndef VERSION_nixxy
 #define VERSION_nixxy "0.1.0.0"
@@ -30,16 +50,16 @@
   (major1) == 0 && (major2) <  1 || \
   (major1) == 0 && (major2) == 1 && (minor) <= 0)
 #endif /* MIN_VERSION_nixxy */
-/* package turtle-1.6.2 */
-#ifndef VERSION_turtle
-#define VERSION_turtle "1.6.2"
-#endif /* VERSION_turtle */
-#ifndef MIN_VERSION_turtle
-#define MIN_VERSION_turtle(major1,major2,minor) (\
+/* package process-1.6.19.0 */
+#ifndef VERSION_process
+#define VERSION_process "1.6.19.0"
+#endif /* VERSION_process */
+#ifndef MIN_VERSION_process
+#define MIN_VERSION_process(major1,major2,minor) (\
   (major1) <  1 || \
   (major1) == 1 && (major2) <  6 || \
-  (major1) == 1 && (major2) == 6 && (minor) <= 2)
-#endif /* MIN_VERSION_turtle */
+  (major1) == 1 && (major2) == 6 && (minor) <= 19)
+#endif /* MIN_VERSION_process */
 
 /* tool gcc-13.2.0 */
 #ifndef TOOL_VERSION_gcc
@@ -101,6 +121,16 @@
   (major1) == 0 && (major2) <  68 || \
   (major1) == 0 && (major2) == 68 && (minor) <= 9)
 #endif /* MIN_TOOL_VERSION_hsc2hs */
+/* tool pkg-config-0.29.2 */
+#ifndef TOOL_VERSION_pkg_config
+#define TOOL_VERSION_pkg_config "0.29.2"
+#endif /* TOOL_VERSION_pkg_config */
+#ifndef MIN_TOOL_VERSION_pkg_config
+#define MIN_TOOL_VERSION_pkg_config(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  29 || \
+  (major1) == 0 && (major2) == 29 && (minor) <= 2)
+#endif /* MIN_TOOL_VERSION_pkg_config */
 /* tool runghc-9.6.5 */
 #ifndef TOOL_VERSION_runghc
 #define TOOL_VERSION_runghc "9.6.5"

@@ -1,5 +1,0 @@
-include .gitignore
-include data/terminator.appdata.xml.in data/terminator.desktop.in
-include tests/*
-include INSTALL.md README.md
-exclude po/.intltool-merge-cache
