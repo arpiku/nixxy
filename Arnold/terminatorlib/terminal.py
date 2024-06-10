@@ -23,7 +23,6 @@ from .factory import Factory
 from .terminator import Terminator
 from .titlebar import Titlebar
 from .terminal_popup_menu import TerminalPopupMenu
-from .prefseditor import PrefsEditor
 from .searchbar import Searchbar
 from .translation import _
 from .signalman import Signalman
@@ -1589,10 +1588,6 @@ class Terminal(Gtk.VBox):
         envv = ['TERM=%s' % self.config['term'],
                 'COLORTERM=%s' % self.config['colorterm'], 'PWD=%s' % self.cwd,
                 'TERMINATOR_UUID=%s' % self.uuid.urn]
-        if self.terminator.dbus_name:
-            envv.append('TERMINATOR_DBUS_NAME=%s' % self.terminator.dbus_name)
-        if self.terminator.dbus_path:
-            envv.append('TERMINATOR_DBUS_PATH=%s' % self.terminator.dbus_path)
 
         dbg('Forking shell: "%s" with args: %s' % (shell, args))
         args.insert(0, shell)
@@ -2153,14 +2148,6 @@ class Terminal(Gtk.VBox):
 
     def key_line_down(self):
         self.scroll_by_line(1)
-
-    def key_preferences(self):
-        PrefsEditor(self)
-
-    def key_preferences_keybindings(self):
-        #need to have this as a config may be preferences_default
-        #have a mapping rather than hardcoded page
-        PrefsEditor(self, cur_page = 3)
 
     def key_help(self):
         manual_index_page = manual_lookup()
