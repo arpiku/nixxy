@@ -10,6 +10,9 @@ pkgs.mkShell {
     pkgs.pkg-config
     pkgs.zlib
 
+    #For Building Kakoune
+    pkgs.gnumake
+
     #For Arnold
     pkgs.vte
     pkgs.gtk3

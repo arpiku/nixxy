@@ -1,6 +1,4 @@
-[submodule "src/Parts/st"]
-	path = src/Parts/st
-	url = https://github.com/arpiku/st.git
-[submodule "src/Parts/tmux"]
-	path = src/Parts/tmux
-	url = https://github.com/arpiku/tmux.git
+
+[submodule "src/tools/kakoune"]
+	path = src/tools/kakoune
+	url = https://github.com/arpiku/kakoune.git
