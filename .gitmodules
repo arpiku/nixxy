@@ -1,4 +1,1 @@
 
-[submodule "src/tools/kakoune"]
-	path = src/tools/kakoune
-	url = https://github.com/arpiku/kakoune.git

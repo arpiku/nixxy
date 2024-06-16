@@ -9,10 +9,9 @@ pkgs.mkShell {
     # pkgs.cabal-install
     pkgs.zlib
 
-    #For Building tmux
+    #For Building Kakoune
     pkgs.gnumake
     pkgs.automake
-    pkgs.autoconf
     pkgs.pkg-config
     pkgs.yacc
 
@@ -26,7 +25,13 @@ pkgs.mkShell {
     pkgs.python311Packages.configobj
     pkgs.python311Packages.psutil
     pkgs.gsettings-desktop-schemas
+    pkgs.pkg-config
 
+    
+    #Dbus for terminator control
+    pkgs.python311Packages.dbus-python
+
+    pkgs.pydeps
 
 
   ];
