@@ -1,0 +1,1 @@
+export MyVar="asdfasdf"

@@ -1,0 +1,37 @@
+cabal-version:      3.0
+name:               nixxy
+version:            0.1.0.0
+synopsis:           Bunch of Code that helps me...code and stuff.
+-- description:
+homepage:           arpiku.xyz/nixxy
+license:            GPL-2.0-only
+license-file:       LICENSE
+author:             arpiku
+maintainer:         akphysics03@gmail.com
+-- copyright:
+category:           General Purpose Assistance for computing
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+-- extra-source-files:
+
+common warnings
+    ghc-options: -Wall
+
+library
+    import:           warnings
+    exposed-modules:  MyLib
+    -- other-modules:
+    -- other-extensions:
+    build-depends:    base ^>=4.18.2.1
+    hs-source-dirs:   src
+    default-language: GHC2021
+
+executable nixxy
+    import:           warnings
+    main-is:          Main.hs
+    build-depends:
+        base ^>=4.18.2.1,
+        nixxy
+
+    hs-source-dirs:   app
+    default-language: GHC2021
