@@ -5,7 +5,7 @@ module Main where
 import System.Environment
 import Data.List
 
-main :: IO ()
+min :: IO ()
 main = do
   putStrLn "Hello, Haskell!"
   args <- getArgs

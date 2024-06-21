@@ -1,0 +1,25 @@
+
+
+# Enable line numbers
+add-highlighter global/ number-lines
+
+# Set default indentation
+set-option global tabstop 4
+set-option global indentwidth 4
+
+# Set colorscheme (you can change this to any installed theme)
+colorscheme gruvbox-light
+
+
+hook global BufSetOption filetype=*.lhs %{
+    set buffer filetype literate-haskell
+    hook -group literate-haskell-mode global WinSetOption filetype=*.lhs %{
+        add-highlighter shared/literate-haskell
+    }
+    add-highlighter shared/literate-haskell group
+    add-highlighter shared/literate-haskell/markdown regex ^[^>].* 0:default
+    add-highlighter shared/literate-haskell/code ref default
+    add-highlighter shared/literate-haskell/code ref haskell
+}
+
+

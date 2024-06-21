@@ -1,0 +1,30 @@
+# Enable line numbers
+add-highlighter global/ number-lines
+
+# Set default indentation
+set-option global tabstop 4
+set-option global indentwidth 4
+
+# Set colorscheme (you can change this to any installed theme)
+colorscheme gruvbox-light
+
+# Yank to system clipboard
+define-command -override -hidden copy-to-clipboard %{
+    evaluate-commands -draft -save-regs d "
+    yank | execute-keys <a-|>y
+    shell :xclip -selection clipboard -in < k@d
+}
+
+# Paste from system clipboard
+define-command -override -hidden paste-from-clipboard %{
+    evaluate-commands -draft "
+    yank | execute-keys <a-|>p
+    shell :xclip -selection clipboard -out > k
+    execute-keys P
+}
+
+# Bind the commands to keys
+map global normal <c-y> ': copy-to-clipboard<ret>'
+map global normal <c-p> ': paste-from-clipboard<ret>'
+map global visual <c-y> ': copy-to-clipboard<ret>'
+map global visual <c-p> ': paste-from-clipboard<ret>'
