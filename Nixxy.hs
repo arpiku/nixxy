@@ -1,9 +1,13 @@
-#! /usr/bin/env runghc
+#! /usr/env/bin runghc
 
-import System.Environment
+module Nixxy
 
-cmdParser a = return (id)
-final = return ()
+where
+
+import System.Process
+import Data.Map
+import Data.Char
 
 
-main = getArgs >>= cmdParser >> final
+
+
