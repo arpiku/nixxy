@@ -12,7 +12,6 @@ selected = [SetColor Background Vivid Cyan]
 alt1 = [SetColor Background Vivid White]
 alt2 = [SetColor Background Vivid Blue]
 
-
 fmtStrings fmts [] = []
 fmtStrings [] xs = []
 fmtStrings (fmt:fmts) (x:xs) = fmt x : fmtStrings fmts xs
